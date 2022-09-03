@@ -82,10 +82,9 @@ tuple<float> leituramq2(){
 }
 
 void valormq2(float leitura_mq2){
-  int valor_mq2 = analogRead(PinA0);
-  if (valor_mq2 > leitura_sensor_mq2){
+  if (leitura_mq2 > leitura_sensor_mq2){
     Serial.println("Nível perigoso de gases inflamáveis: ");
-      Serial.print(valor_mq2);
+      Serial.print(leitura_mq2);
         Serial.print(" ppm.")
     digitalWrite(Pinbuzzer, HIGH);
       digitalWrite(Pinled, HIGH);
@@ -94,12 +93,12 @@ void valormq2(float leitura_mq2){
     Serial.println("Níveis estáveis de gases inflamáveis:");
     digitalWrite(Pinbuzzer, LOW);
       digitalWrite(Pinled, LOW);  
-   if (leitura_sensor_mq2 < 300){
+   if (leitura_mq2 < 300){
     Serial.print(" valor abaixo do nível de sensibilidade do sensor.") 
    }
    else{
     Serial.print(" ");
-      Serial.print(valor_mq2);
+      Serial.print(leitura_mq2);
         Serial.print(" ppm.");
    }
   }
@@ -132,10 +131,9 @@ tuple<float> leituramq7(){
 }
 
 void valormq7(float leitura_mq7){
-  int valor_mq7 = analogRead(PinA1);
-  if (valor_mq7 > leitura_sensor_mq7){
+  if (leitura_mq7 > leitura_sensor_mq7){
     Serial.println("Nível de Monóxido de Carbono: ");
-      Serial.print(valor_mq7);
+      Serial.print(leitura_mq7);
         Serial.print(" ppm.")
     digitalWrite(Pinbuzzer, HIGH);
       digitalWrite(Pinled, HIGH);
@@ -144,12 +142,12 @@ void valormq7(float leitura_mq7){
     Serial.println("Níveis estáveis de Monóxido de Carbono:");
     digitalWrite(Pinbuzzer, LOW);
       digitalWrite(Pinled, LOW);  
-   if (leitura_sensor_mq2 < 10){
+   if (leitura_mq7 < 10){
     Serial.print(" valor abaixo do nível de sensibilidade do sensor.") 
    }
    else{
     Serial.print(" ");
-      Serial.print(valor_mq7);
+      Serial.print(leitura_mq7);
         Serial.print(" ppm.");
    }
   }
@@ -182,10 +180,9 @@ tuple<float> leituramq135(){
 }
 
 void valormq135(float leitura_mq135){
-  int valor_mq135 = leitura_mq135;
-  if (valor_mq135 > leitura_sensor_mq135){
+  if (leitura_mq135 > leitura_sensor_mq135){
     Serial.println("Nível de Gases Tóxicos: ");
-      Serial.print(valor_mq135);
+      Serial.print(leitura_mq135);
         Serial.print(" ppm.")    
     digitalWrite(Pinbuzzer, HIGH);
       digitalWrite(Pinled, HIGH);
@@ -194,12 +191,12 @@ void valormq135(float leitura_mq135){
     Serial.println("Níveis estáveis de gases tóxicos:");
     digitalWrite(Pinbuzzer, LOW);
       digitalWrite(Pinled, LOW);  
-   if (leitura_sensor_mq2 < 10){
+   if (leitura_mq135 < 10){
     Serial.print(" valor abaixo do nível de sensibilidade do sensor.") 
    }
    else{
     Serial.print(" ");
-      Serial.print(valor_mq135);
+      Serial.print(leitura_mq135);
         Serial.print(" ppm.");
    }
   }
