@@ -5,3 +5,5 @@ Este projeto tem como objetivo monitorar o nível de qualidade do ar em ambiente
 O repositório possui o código para Arduino Ide e o diagrama elétrico do circuito.
 
 Lembrando que para utilizar este código é preciso baixar a biblioteca "mq135" criada pelo engenheiro de software Davide Gironi.
+
+Este projeto está detalhadamente explicado no artigo científico "Desenvolvimento de uma plataforma de prototipagem para o monitoramento de substâncias insalubres em ambientes internos fechados" publicado na Revista Humanidades & Tecnologia (FINOM). Link: http://revistas.icesp.br/index.php/FINOM_Humanidade_Tecnologia/article/view/3004 
